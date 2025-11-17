@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Make runme.sh executable
-        run: chmod +x ./runme.sh
+      - name: Make scripts executable
+        run: |
+          chmod +x ./runme.sh
+          chmod +x ./color.sh
+          chmod +x ./test_color.sh
       - name: Run build and test script
         run: ./runme.sh
